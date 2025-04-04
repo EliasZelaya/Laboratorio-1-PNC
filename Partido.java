@@ -48,6 +48,6 @@ public class Partido {
     }
 
     public String DetallesPartido() {
-        return "El equipo A lleva " + getGolesEquipoA() + "\nEl equipo B lleva " + getGolesEquipoB();
+        return "El equipo A lleva " + getGolesEquipoA() + " goles \nEl equipo B lleva " + getGolesEquipoB() + " goles\n";
     }
 }
