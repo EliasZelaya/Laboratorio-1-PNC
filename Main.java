@@ -1,7 +1,6 @@
-import java.util.*;
-import java.util.stream.Collectors;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -19,6 +18,7 @@ public class Main {
         Jugador jugador7 = new Jugador(7, "Gabriel", 2, 10);
         Jugador jugador8 = new Jugador(8, "Mario", 8, 15);
         Jugador jugador9 = new Jugador(9, "Alfredo", 10, 7);
+        Jugador jugador10 = new Jugador(10, "Paquito", 7, 12);
 
         jugadores.add(jugador1);
         jugadores.add(jugador2);
@@ -29,7 +29,25 @@ public class Main {
         jugadores.add(jugador7);
         jugadores.add(jugador8);
         jugadores.add(jugador9);
+        jugadores.add(jugador10);
 
+        List<Jugador> equipoA = new ArrayList<>();
+        List<Jugador> equipoB = new ArrayList<>();
+        equipoA.add(jugador1);
+        equipoA.add(jugador2);
+        equipoA.add(jugador3);
+        equipoA.add(jugador4);
+        equipoA.add(jugador5);
+        equipoB.add(jugador6);
+        equipoB.add(jugador7);
+        equipoB.add(jugador8);
+        equipoB.add(jugador9);
+        equipoB.add(jugador10);
+
+        Partido partido = new Partido(equipoA, equipoB, 2, 4);
+        System.out.println(partido.DetallesPartido());
+
+        System.out.println("Listado de jugadores con mas de 5 goles: \n");
 
         //Filtro de jugadores con mas de 5 goles
            List<Jugador> jugadoresFiltrados = jugadores.stream()
