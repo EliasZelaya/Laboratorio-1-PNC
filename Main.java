@@ -56,5 +56,30 @@ public class Main {
 
 
             jugadoresFiltrados.forEach(jugador -> System.out.println(jugador));
+
+
+        
+
+        // ACTUALIZACION 
+        // Simular goles en el partido
+        jugador6.anotarGoles(1);
+        jugador1.anotarGoles(2);
+        jugador8.anotarGoles(1);
+        jugador4.anotarGoles(3);
+        jugador5.anotarGoles(0);
+
+        // Actualizar estadísticas
+        for (Jugador j : equipoA) j.actualizarEstadisticas();
+        for (Jugador j : equipoB) j.actualizarEstadisticas();
+
+        // Mostrar estadísticas
+        System.out.println("Estadísticas después del partido:\n");
+        for (Jugador j : equipoA) j.mostrarEstadisticas();
+        for (Jugador j : equipoB) j.mostrarEstadisticas();
+
+        // MAXIMO GOLEADOR 
+        Jugador maxGoleador = AnalizadorPartido.obtenerMaximoGoleador(equipoA, equipoB);
+        System.out.println("El maximo goleador del partido fue: " +
+        maxGoleador.getNombre() + " con " + maxGoleador.getGolesEnPartido() + " goles.");
     }
 }
