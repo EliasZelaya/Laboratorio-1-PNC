@@ -4,8 +4,8 @@ public class Jugador {
     private String nombre;
     private int golesMarcados;
     private int partidosJugados;
-    int golesTotales; // TODO : unificar las variables despues 
-    int golesEnPartido; //
+    private int golesEnPartido; 
+    
 
 
     // Constructor de la clase Jugador
@@ -15,7 +15,6 @@ public class Jugador {
         this.golesMarcados = golesMarcados;
         this.partidosJugados = partidosJugados;
         this.golesEnPartido = 0; // var aux
-        this.golesTotales = 0; // var aux
     }
 
 
@@ -46,24 +45,24 @@ public class Jugador {
     public void setGolesMarcados(int golesMarcados) {
         this.golesMarcados = golesMarcados;
     }
-    //TODO : ELIMINAR DESPUES 
+    //TODO : Revisar lo agregado 
 
     public void anotarGoles(int goles) {
         this.golesEnPartido = goles;
     }
     //ACTUALIAR ESTADISTICAS 
     public void actualizarEstadisticas() {
-        this.golesTotales += this.golesEnPartido;
+        this.golesMarcados += this.golesEnPartido;
         this.partidosJugados += 1;
     }
     // MOSTRAR ESTADISTICAS
     public void mostrarEstadisticas() {
         System.out.println("Jugador: " + nombre);
         System.out.println(" - Goles en este partido: " + golesEnPartido);
-        System.out.println(" - Goles totales: " + golesTotales);
+        System.out.println(" - Goles totales: " + golesMarcados);
         System.out.println(" - Partidos jugados: " + partidosJugados);
         System.out.println(" - Promedio de goles por partido: " +
-            (partidosJugados > 0 ? (double)golesTotales / partidosJugados : 0));
+            (partidosJugados > 0 ? (double)golesMarcados / partidosJugados : 0));
         System.out.println();
     }
 

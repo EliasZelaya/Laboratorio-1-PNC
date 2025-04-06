@@ -54,11 +54,7 @@ public class Main {
             .filter(jugador -> jugador.getGolesMarcados() > 5)
             .collect(Collectors.toList());
 
-
             jugadoresFiltrados.forEach(jugador -> System.out.println(jugador));
-
-
-        
 
         // ACTUALIZACION 
         // Simular goles en el partido
